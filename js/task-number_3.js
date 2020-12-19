@@ -1,11 +1,14 @@
-const findBestEmployee = function(employees) {
-    const values = Object.values(findBestEmployee);
-    console.log(values);
-    
-    
+"use strict"
+
+const findBestEmployee = function (employees) {
+  const values = Object.values(employees);
+  const keys = Object.keys(employees);
+  const maxValue = Math.max(...values);
+  const indexOfMaxValue = values.findIndex(el => el === maxValue);
+
+  return keys[indexOfMaxValue]
+  
 };
-
-
 
 
 console.log(
@@ -17,19 +20,19 @@ console.log(
   }),
 ); // lorence
 
-// console.log(
-//   findBestEmployee({
-//     poly: 12,
-//     mango: 17,
-//     ajax: 4,
-//   }),
-// ); // mango
+console.log(
+  findBestEmployee({
+    poly: 12,
+    mango: 17,
+    ajax: 4,
+  }),
+); // mango
 
-// console.log(
-//   findBestEmployee({
-//     lux: 147,
-//     david: 21,
-//     kiwi: 19,
-//     chelsy: 38,
-//   }),
-// ); // lux
+console.log(
+  findBestEmployee({
+    lux: 147,
+    david: 21,
+    kiwi: 19,
+    chelsy: 38,
+  }),
+); // lux
