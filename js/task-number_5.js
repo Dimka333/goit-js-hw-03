@@ -8,23 +8,14 @@ const products = [
 ];
 
 
-const getAllPropValues = function (arr, prop) {
-  const names = [];
-  const quantitys = [];
-  const prices = [];
-
-  for (const prod of products) {
-    names.push(prod.name);
-    
-    if (prop === prod.name) {
-    console.log(names);
-    }
-          
-    
-  
-    
+const getAllPropValues = (arr, prop) => {
+  let values = [];
+  for (let i = 0; i < arr.length; i++) {
+    values.push(arr[i][prop])
   }
-}
+  return values;
+
+};
 
 
 // const getAllProducts = function (products) {
